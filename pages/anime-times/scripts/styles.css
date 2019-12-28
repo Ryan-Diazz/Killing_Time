@@ -5,7 +5,7 @@ body {
     overflow: hidden;
 }
 
-body::-webkit-scrollbar {
+.portofolio::-webkit-scrollbar {
     display: none;
 }
 
@@ -26,7 +26,6 @@ nav {
     color: white;
     text-shadow: 2px 2px firebrick;
     text-decoration: underline; 
-    text-underline-position: below;
 }
 
 .logo:hover{
@@ -126,7 +125,7 @@ nav {
     height: auto;
 }
 
-.latest{
+section{
     height: 500px;
     width: 99.8%;
     color: white;
@@ -140,38 +139,36 @@ nav {
     background: yellow;
 }
 
-.latest h1 {
+section h1 {
     margin-left: 5%;
 }
 
-.listLatest{
+.list{
     height: 425px;
     width: 90%;
     margin: 0% 5% 0% 5%;
     display: flex;
     overflow: scroll;
     color: white;
-}
-.prevBtn{
-    float: left;
-    height: 400px;
-    width: 4%;
-    margin-top: 5px;
+    scroll-behavior: smooth;
 }
 
+.list::-webkit-scrollbar {
+    display: none;
+}
 .nextBtn{
     height: 4vw;
     width: 4vw;
     background-color: red;
     background-image: url(../content/images/arrow\ right.png);
     background-size: 100% 100%;
-    border: black solid 0px;
     cursor: pointer;
     border: 1px solid red;
     border-radius: 50%;
     margin-top: 175px;
     right: 0.5%;
-    visibility: hidden;
+    float: right;
+    visibility: visible;
 }
 
 .prevBtn{
@@ -185,8 +182,9 @@ nav {
     border: 1px solid red;
     border-radius: 50%;
     margin-top: 175px;
-    visibility: hidden;
+    visibility: visible;
     left: 0.5%;
+    float: left;
 }
 
 .show{

@@ -11,23 +11,18 @@ hamburger.addEventListener("click", () => {
 const nextBtn = document.querySelector(".nextBtn");
 const prevBtn = document.querySelector(".prevBtn");
 const Latest = document.querySelector(".listLatest");
+const popular = document.querySelector(".listpopular");
+const recomended = document.querySelector(".listrecomended")
 
-function start(){
+function start() {
     prevBtn.hide
-
 }
 
-nextBtn.onclick = function () {
-    Scroller(785,Latest, "next") 
-};
 
-prevBtn.onclick = function () {
-    Scroller(785, Latest, "Prev");
-};
 
-function Scroller(Distance,element,direction){
-    if(direction == "Prev"){
-        element.scrollBy(-Distance, 0);
+function Scroller(Distance, element, direction) {
+    if (direction == "Prev") {
+        element.scrollBy(Distance, 0);
     } else {
         element.scrollBy(Distance, 0);
     }
