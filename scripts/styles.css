@@ -1,0 +1,229 @@
+*,*::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: sourceProMed;
+    src: url(../fonts/SourceCodePro-Medium.ttf)
+}
+
+@font-face {
+    font-family: sourceProRegular;
+    src: url(../fonts/SourceCodePro-Regular.ttf)
+}
+
+body {
+    font-family: sourceProRegular;
+}
+/* background div */
+.portofolio {
+    color: white;
+    background: radial-gradient(rgb(25, 0, 0), rgba(0, 0, 0 ,1));
+}
+
+/* header */
+nav {
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px; 
+    border-bottom: red solid 1.5px; 
+    z-index: 2;
+}
+
+
+.logo a{
+    color: white;
+    text-shadow: 2px 2px firebrick;
+    text-decoration: underline; 
+    text-underline-position: below;
+}
+
+.logo:hover{
+    opacity: 0.5;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu:hover {
+    opacity: 0.5;
+}
+/* end header */
+
+/* main/site */
+.scroller{
+    height: 90vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+
+}
+
+.page {
+    scroll-snap-align: start;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    border-bottom: red solid 1px;
+    width: 90%;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.page-image {
+    overflow: hidden;
+    width:100%;
+    align-self: center;
+    justify-self: center;
+    grid-column: 3/5;
+    cursor: pointer;
+    border: red solid 2px;
+}
+
+.page-image img {
+    width: 100%;
+}
+
+.page-image:hover {
+    border: darkred solid 2px;
+    opacity: 0.75;
+    transition: all 0.5s ease;
+}
+
+.details {
+    grid-column: 2/3;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.details h1 {
+    font-size: 48px;
+    font-family: sourceProMed;
+    text-shadow: 2px 2px firebrick;
+}
+
+.details h2 {
+    font-size: 20px;
+    padding: 30px 0px;
+}
+
+.details h2 a {
+    color: white
+
+}
+
+.details p{
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1366px) {
+    .page{
+        grid-template-columns: 5% 1fr 1fr 5%;
+    }
+    .page-image{
+        grid-column: 3/4;
+    }
+    .details {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .nav-links {
+        height: 25vh;
+    }
+    
+    .pages h3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    
+    .nav-links {
+        width: 25vw;
+        background: black;
+    }
+    .page{
+        grid-template-columns: 5% 1fr 5%;
+    }
+
+    .page-image {
+        grid-column: 2/3;
+    }
+    .details h1 {
+        font-size: 32px;
+    }
+    .details h2 {
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+
+    .details p {
+        font-size: 10px;
+    }
+}
+
+
+/* navigation */
+
+.nav-open {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 5%;
+    width: 90%;
+    height: 50vh;
+    background: radial-gradient(rgb(25, 0, 0), rgba(0, 0, 0 ,1));
+    z-index: 1;
+    border-bottom: solid 1px red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1.5s ease;
+    transform: translateY(-80%);
+}
+
+.opened{
+    transform: translateY(0%);
+}
+
+.contact {
+    grid-column: 1/2;
+}
+
+.social {
+    grid-column: 2/3;
+}
+
+.nav-open h3 {
+    font-size: 28px;
+    padding-bottom: 25px;
+    font-family: sourceProRegular;
+}
+
+.nav-open p{
+    font-size: 18px;
+    font-family: sourceProMed
+}
+
+.social-links img{
+    padding: 0px 15px;
+    fill: red;
+    opacity: 0.80;
+}
+
+.logo, .menu {
+    z-index: 2;
+}
